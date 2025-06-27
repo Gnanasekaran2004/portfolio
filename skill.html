@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      /* background-color: #8eff7727; */
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+      background-image: url(/images/skillsbg.jpg);
+      background-size: cover;
+    }
+
+    .skills-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #000000;
+      position: relative;
+      font-family: 'Courier New', Courier, monospace;
+      border-left: rgb(114, 225, 3) 2px solid;
+      border-right: rgb(114, 225, 3) 2px solid;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-box {
+      background: rgba(54, 54, 54, 0.753);
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      border: rgb(114, 225, 3) 1px solid;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-6px);
+      box-shadow:2px 2px 5px #000000;
+    }
+
+    .skill-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .skill-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: rgb(114, 225, 3);
+    }
+
+    .progress-bar {
+      background: #e5e7eb71;
+      height: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar span {
+      display: block;
+      height: 100%;
+      background: rgb(114, 225, 3);
+      width: 0;
+      border-radius: 8px;
+      animation: fill-bar 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fill-bar {
+      to {
+        width: var(--skill-level);
+      }
+    }
+  </style>
+</head>
+<body>
+        <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <section class="skills-section">
+    <h2>My Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+        <div class="skill-title">HTML</div>
+        <div class="progress-bar" style="--skill-level: 90%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+        <div class="skill-title">CSS</div>
+        <div class="progress-bar" style="--skill-level: 85%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+        <div class="skill-title">JavaScript</div>
+        <div class="progress-bar" style="--skill-level: 80%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fab fa-react"></i></div>
+        <div class="skill-title">React</div>
+        <div class="progress-bar" style="--skill-level: 65%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+        <div class="skill-title">Node.js</div>
+        <div class="progress-bar" style="--skill-level: 50%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-icon"><i class="fas fa-database"></i></div>
+        <div class="skill-title">MongoDB</div>
+        <div class="progress-bar" style="--skill-level: 45%;">
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<footer >
+        <p>&#169 copyright 2025</p>
+        <p>Designed by Gnanasekaran</p>
+      </footer>
+</body>
+</html>

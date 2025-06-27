@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Skills Section === */
+.skills-section {
+  background-image: url(skillsbg.jpg);
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.skills-title {
+  font-size: 2.4rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+  margin-right: 400px;
+  color: #000000;
+  width: 200px;
+    border-left: rgb(114, 225, 3) solid 4px;
+  border-right:rgb(114, 225, 3) solid 4px;
+  border-radius: 5px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  max-width: 1000px;
+  margin: auto;
+  
+}
+
+/* === Skill Card === */
+.skill-card {
+  color: #0ea5e9;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 160px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+}
+
+.skill-card h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.progress {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, #505050 75%, transparent 76%),
+    conic-gradient(var(--color) calc(var(--value) * 1%), #e5e7eb 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spinIn 1s ease-in-out;
+  position: relative;
+}
+
+.progress span {
+  font-size: 2rem;
+  color: var(--color);
+}
+
+/* === Animation === */
+@keyframes spinIn {
+  0% {
+    transform: scale(0.8) rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* === Dark Mode Support === */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f172a;
+    color: #f8fafc;
+  }
+
+  .skills-section {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  }
+
+  .skill-card {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  .skill-card h3 {
+    color: #f1f5f9;
+  }
+
+  .progress {
+    background:
+      radial-gradient(closest-side, #1e293b 75%, transparent 76%),
+      conic-gradient(var(--color) calc(var(--value) * 1%), #334155 0%);
+  }
+}
+h3{
+  color: greenyellow;
+}
